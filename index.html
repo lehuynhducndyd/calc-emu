@@ -2266,11 +2266,15 @@
   const MT_SOLAR = "SOLAR";
 
   const emulatorList = {
-
     'EY023': {
       'name': 'fx-880BTG',
       'background': '#e0e1df'
+    },
+    'CY298': {
+      'name': 'fx-580VNX',
+      'background': '#e0e1df'
     }
+
   };
   const emulatorGroup = [{
     'shortName': 'VN',
@@ -2278,7 +2282,7 @@
       'en': 'Vietnam',
       'vi': 'Việt Nam'
     },
-    'models': ['EY023']
+    'models': ['EY023', 'CY298']
   }];
   // Since simlib.wasm assumes global states, SimWrapper must in fact be a singleton.
   // Thus, it's not wrong to store the instance in a global variable.
