@@ -91,7 +91,7 @@
   body {
     margin: 0;
     overflow: hidden;
-    background-color: #e0e1df;
+    background-color: #ffffff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
@@ -235,7 +235,7 @@
   }
 
   #modelList {
-    background-color: #e0e1df;
+    background-color: #ffffff;
     margin: 2em auto;
     overflow-y: scroll;
     height: calc(100vh - 2em);
@@ -572,6 +572,14 @@
     font-size: 1.4rem;
     margin: 0 5px;
     min-height: 4rem;
+  }
+
+  /* Ẩn triệt để các nút trên HUD */
+  #popupDisplayBtn,
+  #autoKeyBtn,
+  #hexEditorBtn,
+  #settingsBtn {
+    display: none !important;
   }
 
   @keyframes blink {
@@ -1352,14 +1360,14 @@
           <span data-i18n-tag="MenuTakeS">Take Screenshot</span>
         </label>
       </div>
-      <div class="setting-menu-icon-list">
+      <!-- <div class="setting-menu-icon-list">
         <label><input type="checkbox" name="menu-bar-icon-cus" value="popupDisplayBtn">
           <span><svg class="settings-menu-icon">
               <use xlink:href="#popupDisplayIcon" />
             </svg></span>
           <span data-i18n-tag="MenuPopupD">Popup Display</span>
         </label>
-      </div>
+      </div> -->
       <div class="setting-menu-icon-list">
         <label><input type="checkbox" name="menu-bar-icon-cus" value="keyLogBtn">
           <span><svg class="settings-menu-icon">
@@ -1368,30 +1376,30 @@
           <span data-i18n-tag="MenuStartK">Start Keylog</span>
         </label>
       </div>
-      <div class="setting-menu-icon-list">
+      <!-- <div class="setting-menu-icon-list">
         <label><input type="checkbox" name="menu-bar-icon-cus" value="autoKeyBtn">
           <span><svg class="settings-menu-icon">
               <use xlink:href="#autoKeyIcon" />
             </svg></span>
           <span data-i18n-tag="MenuAutoPK">Auto Press Key</span>
         </label>
-      </div>
-      <div class="setting-menu-icon-list">
+      </div> -->
+      <!-- <div class="setting-menu-icon-list">
         <label><input type="checkbox" name="menu-bar-icon-cus" value="hexEditorBtn">
           <span><svg class="settings-menu-icon">
               <use xlink:href="#hexEditorIcon" />
             </svg></span>
           <span data-i18n-tag="MenuHexE">Hex Editor</span>
         </label>
-      </div>
-      <div class="setting-menu-icon-list">
+      </div> -->
+      <!-- <div class="setting-menu-icon-list">
         <label><input type="checkbox" name="menu-bar-icon-cus" value="settingsBtn">
           <span><svg class="settings-menu-icon">
               <use xlink:href="#settingsIcon" />
             </svg></span>
           <span data-i18n-tag="MenuEmulatorS">Emulator Settings</span>
         </label>
-      </div>
+      </div> -->
     </div>
     <div class="group">
       <h3 data-i18n-tag="SettingMenuCMTitle">Custom Model</h3>
@@ -1590,7 +1598,7 @@
         </svg></span>
       <span data-i18n-tag="MenuTakeS">Take Screenshot</span>
     </li>
-    <li class="menu-item" id="menuPopupDisplayBtn">
+    <li class="menu-item" id="menuPopupDisplayBtn" style="display: none;">
       <span><svg class="menu-icon">
           <use xlink:href="#popupDisplayIcon" />
         </svg></span>
@@ -1602,19 +1610,19 @@
         </svg></span>
       <span data-i18n-tag="MenuStartK">Start Keylog</span>
     </li>
-    <li class="menu-item" id="menuAutoKeyBtn">
+    <li class="menu-item" id="menuAutoKeyBtn" style="display: none;">
       <span><svg class="menu-icon">
           <use xlink:href="#autoKeyIcon" />
         </svg></span>
       <span data-i18n-tag="MenuAutoPK">Auto Press Key</span>
     </li>
-    <li class="menu-item" id="menuHexEditorBtn">
+    <li class="menu-item" id="menuHexEditorBtn" style="display: none;">
       <span><svg class="menu-icon">
           <use xlink:href="#hexEditorIcon" />
         </svg></span>
       <span data-i18n-tag="MenuHexE">Hex Editor</span>
     </li>
-    <li class="menu-item" id="menuSettingBtn">
+    <li class="menu-item" id="menuSettingBtn" style="display: none;">
       <span><svg class="menu-icon">
           <use xlink:href="#settingsIcon" />
         </svg></span>
@@ -1757,7 +1765,7 @@
   </a>
   <a class="hud-btn" id="settingsBtn" title="Settings" href="javascript:">
     <span>
-      <svg style="display: none">
+      <svg style="display: none ">
         <symbol id="settingsIcon" fill="none" stroke="#000" stroke-width=".864" viewBox="0 0 24 24">
           <g fill="#000" fill-rule="evenodd" clip-rule="evenodd">
             <path
@@ -2268,11 +2276,11 @@
   const emulatorList = {
     'EY023': {
       'name': 'fx-880BTG',
-      'background': '#e0e1df'
+      'background': '#ffffff'
     },
     'CY298': {
       'name': 'fx-580VNX',
-      'background': '#e0e1df'
+      'background': '#ffffff'
     }
 
   };
