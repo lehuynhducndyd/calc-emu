@@ -2285,7 +2285,12 @@
     'EY090': {
       'name': 'Graph Light',
       'background': '#ffffff'
-    }
+    },
+    'CY23D': {
+      'name': 'CY23D',
+      'background': '#ffffff'
+    },
+
 
   };
   const emulatorGroup = [{
@@ -2294,8 +2299,17 @@
       'en': 'Vietnam',
       'vi': 'Việt Nam'
     },
-    'models': ['EY023', 'CY298', 'EY090']
-  }];
+    'models': ['EY023', 'CY298']
+  },
+  {
+    'shortName': 'OTHER',
+    'name': {
+      'en': 'Others',
+      'vi': 'Khác'
+    },
+    'models': ['CY23D', 'EY090']
+  }
+  ];
   // Since simlib.wasm assumes global states, SimWrapper must in fact be a singleton.
   // Thus, it's not wrong to store the instance in a global variable.
   const SimWrapper = Comlink.wrap(new Worker("./lib/simwrapper.js?1687185326516"))
